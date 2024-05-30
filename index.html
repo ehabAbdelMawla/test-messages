@@ -11,6 +11,7 @@
     </button>
     <script>
       function sendMessage() {
+   console.log( window.opener);
         window.opener.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
       }
     </script>

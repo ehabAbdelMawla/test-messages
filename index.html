@@ -12,8 +12,9 @@
     <script>
       function sendMessage() {
    console.log( window.opener);
+         window.location.href = 'io.ionic.starter://aa?accessToken=sss';
         window.opener.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
-       window.location.href = 'io.ionic.starter://aa?accessToken=sss';
+      
       }
     </script>
   </body>

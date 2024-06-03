@@ -7,13 +7,13 @@
   </head>
   <body>
     <button id="google-login-btn" onclick="sendMessage()">
-    Send Message
+    Send Message v1
     </button>
     <script>
       function sendMessage() {
-   console.log( window.opener);
+         const parentWindow = window.opener || window.parent
          window.location.href = 'io.ionic.starter://aa?accessToken=aaaa&refreshToken=rrrr';
-        window.opener?.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
+        parentWindow?.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
       
       }
     </script>

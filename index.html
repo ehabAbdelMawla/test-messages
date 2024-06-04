@@ -12,7 +12,8 @@
     <script>
       function sendMessage() {
          const parentWindow = window.opener || window.parent
-         window.location.href = 'io.ionic.starter://aa?accessToken=aaaa&refreshToken=rrrr';
+           window.location.href = 'msal://aa?accessToken=aaaa&refreshToken=rrrr';
+         // window.location.href = 'io.ionic.starter://aa?accessToken=aaaa&refreshToken=rrrr';
         parentWindow?.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
       
       }

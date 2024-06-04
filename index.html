@@ -13,7 +13,7 @@
       function sendMessage() {
          const parentWindow = window.opener || window.parent
           if(window.parent){
-             window.location.href = 'msal://aa?accessToken=aaaa&refreshToken=rrrr';
+             window.location.href = 'ut-hub-auth://aa?accessToken=aaaa&refreshToken=rrrr';
           }    else{
             window.location.href = 'io.ionic.starter://aa?accessToken=aaaa&refreshToken=rrrr';
           }

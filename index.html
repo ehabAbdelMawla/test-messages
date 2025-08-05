@@ -1,27 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Message</title>
+    <title>Test Widget Injection</title>
   </head>
   <body>
-    <button id="google-login-btn" onclick="sendMessage()">
-    Send Message v2
-    </button>
-    <script>
-      function sendMessage() {
-         const parentWindow = window.opener || window.parent
-          if(window.parent){
-             window.location.href = 'ut-hub-auth://aa?accessToken=aaaa&refreshToken=rrrr';
-          }    else{
-            window.location.href = 'io.ionic.starter://aa?accessToken=aaaa&refreshToken=rrrr';
-          }
-        parentWindow?.postMessage({accessToken:'access_token',refreshToken:'refresh_token'},'*')
-      
-      }
-    </script>
+    <h1>Sales Team</h1>
 
-    <a href="msauth.com.ULTATEL.HUB://auth">new link ios</a>
+    <script type="text/javascript">
+      (function (w, d, s, u) {
+        w.RocketChat = function (c) {
+          w.RocketChat._.push(c);
+        };
+        w.RocketChat._ = [];
+        w.RocketChat.url = u;
+        var h = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+        j.async = true;
+        j.src =
+          "https://rc-dev.ultatel.com/livechat/rocketchat-livechat.min.js?_=201903270000";
+        h.parentNode.insertBefore(j, h);
+      })(
+        window,
+        document,
+        "script",
+        "https://rc-dev.ultatel.com/livechat?id=19"
+      );
+    </script>
   </body>
 </html>
